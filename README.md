@@ -1,11 +1,11 @@
-# Go AI Comment
+# Go AI Tests for Goland IDE (WIP)
 
-GO AI Comment is an IntelliJ IDEA plugin that helps generate documentation comments for your code using AI.
-It can automatically generate a doc comment for the current function you're working on, or generate a summarized comment for a selected block of code.
+GO AI Tests is an IntelliJ IDEA plugin that helps generate Golang tests for your code using AI.
+It can automatically generate a tests for the current function or selected block.
 
 ## Getting Started
 
-To use Go AI Comment, you'll need to install it as a plugin in your IntelliJ editor (Goland). Here are the steps:
+To use Go AI Tests, you'll need to install it as a plugin in your IntelliJ editor (Goland). Here are the steps:
 
 1. Go to `Settings` -> `Plugins` -> `Marketplace` in your IntelliJ editor.
 2. Search for "Go AI Tests" and click on the `Install` button.
@@ -24,12 +24,12 @@ The plugin will then use AI to generate a test function for your function or you
 
 ## Contributing
 
-If you'd like to contribute to Go AI Comment, please feel free to submit a pull request. We welcome contributions of all types, from bug fixes to new features.
+If you'd like to contribute to Go AI Tests, please feel free to submit a pull request. We welcome contributions of all types, from bug fixes to new features.
 
 ## License
 
-Go AI Comment is licensed under the MIT License. See the `LICENSE` file for more information.
+Go AI Tests is licensed under the MIT License. See the `LICENSE` file for more information.
 
 ## Contact
 
-If you have any questions or feedback about Go AI Comment, please feel free to contact us at y.alhyane@gmail.com
+If you have any questions or feedback about Go AI Tests, please feel free to contact us at y.alhyane@gmail.com
