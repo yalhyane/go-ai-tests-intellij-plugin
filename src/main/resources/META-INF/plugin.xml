@@ -1,0 +1,72 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.yalhyane.intellij.goAiTests.go-ai-tests</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>Go-AI-tests</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="y.alhyane@gmail.com" url="https://github.com/yalhyane">YAlhyane</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description>
+        <![CDATA[
+            <p>Generate Tests for functions or selected code blocks using ChatGPT API.</p>
+            <h2>Configuration</h2>
+            <ol>
+            <li>
+            Once the plugin is installed, restart the IDE.
+            </li>
+            <li>
+                Retrieve your ChatGPT API key from <a href="https://platform.openai.com/account/api-keys">OpenAI</a>
+                <br/>
+                <strong><i>&nbsp;&nbsp;Note: If you haven't already, you'll have to create an account.</i></strong>
+            </li>
+            <li>
+                Set the API Key in <strong>Settings &gt; Tools &gt; AI Tests</strong>
+            </li>
+            </ol>
+            <h2>To use the plugin:</h2>
+<ol>
+  <li>Put the cursor inside a function for which you want to generate a test or Select a block of code.</li>
+  <li>Go to <strong>Code &gt; Generate</strong>.</li>
+  <li>Select the menu item <strong>Generate AI Tests</strong>.</li>
+  <li>A test file will be generated and inserted into the code.</li>
+</ol>
+        ]]>
+    </description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.goland</depends>
+    <depends>org.jetbrains.plugins.go</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService serviceImplementation="com.yalhyane.intellij.goaitests.settings.AppSettingsState"/>
+        <applicationConfigurable
+                parentId="tools"
+                instance="com.yalhyane.intellij.goaitests.settings.AppSettingsConfigurable"
+                id="com.yalhyane.intellij.goaitests.settings.AppSettingsConfigurable"
+                displayName="AI Tests"/>
+    </extensions>
+
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="Go.GenerateAiTests" class="com.yalhyane.intellij.goaitests.GenerateAiTestsAction"
+                text="Generate AI Tests"
+                description="Generate tests using AI">
+            <add-to-group group-id="GenerateGroup" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl meta SLASH"/>
+        </action>
+    </actions>
+
+
+</idea-plugin>
