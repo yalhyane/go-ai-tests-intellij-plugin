@@ -8,20 +8,19 @@ It can automatically generate a doc comment for the current function you're work
 To use Go AI Comment, you'll need to install it as a plugin in your IntelliJ editor (Goland). Here are the steps:
 
 1. Go to `Settings` -> `Plugins` -> `Marketplace` in your IntelliJ editor.
-2. Search for "Go AI Comment" and click on the `Install` button.
+2. Search for "Go AI Tests" and click on the `Install` button.
 3. Once the plugin is installed, restart IntelliJ IDEA editor to activate it.
 4. Retrieve your ChatGPT API key from [OpenAI](https://platform.openai.com/account/api-keys).
-5. Set the API Key in `Settings` -> `Tools` -> `AI Comment`
+5. Set the API Key in `Settings` -> `Tools` -> `AI Tests`
 
-## Using Go AI Comment
+## Using Go AI Tests
 
-AI Comment provides two main features:
+AI tests provides two main features:
 
-✅ Generate doc comment for Current function.  
-✅ Generate summarized comment for selected block of code.  
+✅ Generate Golang tests for current or selected function.  
 
-To generate an AI comment, simply place your cursor inside a function or select a block for which you want to generate a comment, or select a block of code, then Go to `Code` -> `Generate` or Press `Ctrl + N` (or `Cmd + N` on a Mac) and select `Generate Ai Comment` from the menu.  
-The plugin will then use AI to generate a comment for your function or your block of code.
+To generate an AI Tests, simply place your cursor inside a function or select a block for which you want to generate a test for, or select a block of code, then Go to `Code` -> `Generate` or Press `Ctrl + N` (or `Cmd + N` on a Mac) and select `Generate Ai Tests` from the menu.  
+The plugin will then use AI to generate a test function for your function or your block of code.
 
 ## Contributing
 
